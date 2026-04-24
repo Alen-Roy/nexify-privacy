@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Nexify</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --violet: #7C3AED;
+      --violet-light: #ede9fe;
+      --violet-mid: #c4b5fd;
+      --ink: #1a1025;
+      --muted: #6b7280;
+      --bg: #faf9ff;
+      --surface: #ffffff;
+      --border: #e8e4f3;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--violet);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg { width: 20px; height: 20px; fill: white; }
+
+    .logo-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+
+    .logo-name span { color: var(--violet); }
+
+    .hero {
+      background: linear-gradient(135deg, #7C3AED 0%, #5b21b6 100%);
+      color: white;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .toc {
+      background: var(--violet-light);
+      border-left: 3px solid var(--violet);
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--violet);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 0.3rem;
+    }
+
+    .toc a {
+      color: var(--violet);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2 .num {
+      color: var(--violet);
+      margin-right: 0.4rem;
+      font-size: 1rem;
+    }
+
+    p { margin-bottom: 0.9rem; color: #374151; }
+
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    li { margin-bottom: 0.4rem; color: #374151; }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .info-card h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--violet);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      background: var(--violet-light);
+      color: var(--violet);
+      border-radius: 6px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .highlight {
+      background: #fef9c3;
+      border-left: 3px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.2rem;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #78350f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer strong { color: var(--violet); }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.25rem 4rem; }
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+    </svg>
+  </div>
+  <span class="logo-name">Nexi<span>fy</span></span>
+</header>
+
+<div class="hero">
+  <div class="badge">Legal · Privacy</div>
+  <h1>Privacy Policy</h1>
+  <p>We believe in transparency. Here's exactly what data Nexify collects, how we use it, and your rights.</p>
+</div>
+
+<main>
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Sharing & Third Parties</a></li>
+      <li><a href="#s4">Data Storage & Security</a></li>
+      <li><a href="#s5">Permissions We Request</a></li>
+      <li><a href="#s6">Your Rights</a></li>
+      <li><a href="#s7">Children's Privacy</a></li>
+      <li><a href="#s8">Changes to This Policy</a></li>
+      <li><a href="#s9">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <p>This Privacy Policy describes how <strong>Nestoric Digital LLP</strong> ("we", "us", or "our") collects, uses, and protects your information when you use the <strong>Nexify</strong> mobile application ("App"). By using Nexify, you agree to the practices described in this policy.</p>
+
+  <p><strong>Last updated: April 24, 2026 &nbsp;·&nbsp; Effective date: April 24, 2026</strong></p>
+
+  <section id="s1">
+    <h2><span class="num">01.</span>Information We Collect</h2>
+    <p>We collect the following categories of information to provide and improve the Nexify service:</p>
+
+    <div class="info-card">
+      <h4>Account & Identity</h4>
+      <div class="tag-list">
+        <span class="tag">Full name</span>
+        <span class="tag">Email address</span>
+        <span class="tag">Phone number</span>
+        <span class="tag">Profile photo</span>
+        <span class="tag">User role (client / worker / admin)</span>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h4>Service Activity</h4>
+      <div class="tag-list">
+        <span class="tag">Service requests created</span>
+        <span class="tag">Request status & history</span>
+        <span class="tag">Chat messages</span>
+        <span class="tag">Uploaded files & documents</span>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h4>Payment Information</h4>
+      <div class="tag-list">
+        <span class="tag">Transaction ID</span>
+        <span class="tag">Payment status</span>
+        <span class="tag">Amount & tier</span>
+      </div>
+      <p style="margin-top:0.6rem; margin-bottom:0; font-size:0.85rem; color:#6b7280;">Note: Full card/bank details are processed directly by Razorpay. We do not store sensitive payment credentials.</p>
+    </div>
+
+    <div class="info-card">
+      <h4>Device & Technical</h4>
+      <div class="tag-list">
+        <span class="tag">FCM device token</span>
+        <span class="tag">Device type & OS version</span>
+        <span class="tag">App version</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <h2><span class="num">02.</span>How We Use Your Information</h2>
+    <ul>
+      <li>To create and manage your Nexify account</li>
+      <li>To process service requests between clients and workers</li>
+      <li>To facilitate in-app chat between users</li>
+      <li>To process payments securely through Razorpay</li>
+      <li>To send push notifications about your requests and activity</li>
+      <li>To enable file and document uploads via Cloudinary</li>
+      <li>To provide customer support and resolve disputes</li>
+      <li>To improve app performance and fix issues</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+  </section>
+
+  <section id="s3">
+    <h2><span class="num">03.</span>Data Sharing & Third Parties</h2>
+    <p>We do not sell your personal data. We share information only with trusted service providers necessary to operate Nexify:</p>
+
+    <div class="info-card">
+      <h4>Third-Party Services</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Firebase (Google)</strong> — Authentication, push notifications (FCM), real-time database</li>
+        <li><strong>Razorpay</strong> — Payment processing. Subject to <a href="https://razorpay.com/privacy/" style="color:var(--violet)">Razorpay's Privacy Policy</a></li>
+        <li><strong>Cloudinary</strong> — File and image storage</li>
+        <li><strong>Render</strong> — Backend server hosting</li>
+      </ul>
+    </div>
+
+    <p>We may disclose your information if required by law or to protect the rights and safety of our users.</p>
+  </section>
+
+  <section id="s4">
+    <h2><span class="num">04.</span>Data Storage & Security</h2>
+    <p>Your data is stored on secure servers. We use industry-standard security practices including HTTPS encryption for all data in transit and token-based authentication (JWT) for API access.</p>
+    <div class="highlight">
+      While we take reasonable precautions to protect your data, no method of transmission over the internet is 100% secure. We encourage you to use a strong password and keep your login credentials confidential.
+    </div>
+    <p>We retain your data for as long as your account is active. You may request deletion of your account and associated data at any time by contacting us.</p>
+  </section>
+
+  <section id="s5">
+    <h2><span class="num">05.</span>Permissions We Request</h2>
+    <p>Nexify requests the following device permissions:</p>
+
+    <div class="info-card">
+      <h4>Permission Details</h4>
+      <ul style="margin-bottom:0;">
+        <li><strong>Camera</strong> — To capture and upload photos for service requests and profile pictures</li>
+        <li><strong>Storage / Media</strong> — To select and upload files and images from your device</li>
+        <li><strong>Internet</strong> — Required to connect to Nexify servers</li>
+        <li><strong>Post Notifications</strong> — To receive push notifications about your requests and messages (Android 13+)</li>
+        <li><strong>Network State</strong> — To detect connectivity and handle offline scenarios gracefully</li>
+      </ul>
+    </div>
+
+    <p>All permissions are requested only when needed and used solely for the purposes described above.</p>
+  </section>
+
+  <section id="s6">
+    <h2><span class="num">06.</span>Your Rights</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of the data we hold about you</li>
+      <li><strong>Correction</strong> — Request correction of inaccurate data</li>
+      <li><strong>Deletion</strong> — Request deletion of your account and personal data</li>
+      <li><strong>Withdrawal of consent</strong> — Disable notifications or revoke camera/storage permissions at any time via your device settings</li>
+      <li><strong>Portability</strong> — Request your data in a portable format</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at the email address below.</p>
+  </section>
+
+  <section id="s7">
+    <h2><span class="num">07.</span>Children's Privacy</h2>
+    <p>Nexify is intended for users aged <strong>18 and above</strong>. We do not knowingly collect personal information from children under 18. If we become aware that a child under 18 has provided us with personal data, we will delete it immediately.</p>
+  </section>
+
+  <section id="s8">
+    <h2><span class="num">08.</span>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of Nexify after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="num">09.</span>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+    <div class="info-card">
+      <h4>Nestoric Digital LLP</h4>
+      <ul style="margin-bottom:0; list-style:none; padding:0;">
+        <li>📧 <strong>Email:</strong> <a href="mailto:privacy@nestoric.com" style="color:var(--violet)">privacy@nestoric.com</a></li>
+        <li>📍 <strong>Address:</strong> KNO 702/120/85/1 2ND, Cross Dasappa L/O 8TH A C, C.V. Raman Nagar, Bangalore, Karnataka, India – 560093</li>
+        <li>🌐 <strong>App:</strong> Nexify by Nestoric Digital LLP</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 <strong>Nestoric Digital LLP</strong>. All rights reserved.</p>
+  <p style="margin-top:0.4rem;">This privacy policy applies to the Nexify mobile application.</p>
+</footer>
+
+</body>
+</html>
